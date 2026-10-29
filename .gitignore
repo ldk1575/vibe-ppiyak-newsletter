@@ -13,3 +13,6 @@ store/*.tmp
 
 # 에이전트 도구 상태 파일
 .omc/
+
+# 확인용 dry-run 출력 (실제 발행본을 덮어쓰지 않게)
+output/dryrun/

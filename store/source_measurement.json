@@ -1,5 +1,5 @@
 {
-  "measured_at": "2026-10-29T06:40:20.427609+00:00",
+  "measured_at": "2026-10-29T07:12:43.762655+00:00",
   "rows": [
     {
       "id": "github_trending",
@@ -7,14 +7,15 @@
       "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 0.4,
-      "items": 11,
+      "elapsed_s": 0.6,
+      "items": 14,
       "oss_url_rate_pct": 100.0,
-      "relevance_rate_pct": 100.0,
-      "noise_rate_pct": 0.0,
+      "relevance_rate_pct": 85.7,
+      "noise_rate_pct": 14.3,
       "fresh_48h_rate_pct": null,
+      "fresh_72h_rate_pct": null,
       "dated_items": 0,
-      "summary_len_median": 12828
+      "summary_len_median": 12211
     },
     {
       "id": "geeknews",
@@ -22,12 +23,13 @@
       "url": "https://feeds.feedburner.com/geeknews-feed",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 1.18,
+      "elapsed_s": 1.28,
       "items": 50,
       "oss_url_rate_pct": 0.0,
-      "relevance_rate_pct": 24.0,
-      "noise_rate_pct": 76.0,
+      "relevance_rate_pct": 30.0,
+      "noise_rate_pct": 70.0,
       "fresh_48h_rate_pct": 100.0,
+      "fresh_72h_rate_pct": 100.0,
       "dated_items": 50,
       "summary_len_median": 160
     },
@@ -37,12 +39,13 @@
       "url": "https://news.hada.io/rss/news",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 0.18,
+      "elapsed_s": 0.19,
       "items": 50,
       "oss_url_rate_pct": 0.0,
       "relevance_rate_pct": 30.0,
       "noise_rate_pct": 70.0,
       "fresh_48h_rate_pct": 100.0,
+      "fresh_72h_rate_pct": 100.0,
       "dated_items": 50,
       "summary_len_median": 160
     },
@@ -52,12 +55,13 @@
       "url": "https://hnrss.org/show?points=20",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 1.64,
+      "elapsed_s": 1.18,
       "items": 20,
       "oss_url_rate_pct": 40.0,
       "relevance_rate_pct": 30.0,
       "noise_rate_pct": 70.0,
       "fresh_48h_rate_pct": 20.0,
+      "fresh_72h_rate_pct": 30.0,
       "dated_items": 20,
       "summary_len_median": 231
     },
@@ -67,12 +71,13 @@
       "url": "https://news.ycombinator.com/showrss",
       "status": 419,
       "retried_after": null,
-      "elapsed_s": 0.57,
+      "elapsed_s": 0.56,
       "items": 0,
       "oss_url_rate_pct": null,
       "relevance_rate_pct": null,
       "noise_rate_pct": null,
       "fresh_48h_rate_pct": null,
+      "fresh_72h_rate_pct": null,
       "dated_items": 0,
       "summary_len_median": 0
     },
@@ -82,12 +87,13 @@
       "url": "https://huggingface.co/blog/feed.xml",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 0.38,
+      "elapsed_s": 0.34,
       "items": 891,
       "oss_url_rate_pct": 0.0,
       "relevance_rate_pct": 12.9,
       "noise_rate_pct": 87.1,
       "fresh_48h_rate_pct": 0.3,
+      "fresh_72h_rate_pct": 0.3,
       "dated_items": 891,
       "summary_len_median": 0
     },
@@ -97,14 +103,15 @@
       "url": "https://hnrss.org/newest",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 4.18,
+      "elapsed_s": 8.22,
       "items": 20,
-      "oss_url_rate_pct": 20.0,
-      "relevance_rate_pct": 20.0,
-      "noise_rate_pct": 80.0,
+      "oss_url_rate_pct": 15.0,
+      "relevance_rate_pct": 15.0,
+      "noise_rate_pct": 85.0,
       "fresh_48h_rate_pct": 100.0,
+      "fresh_72h_rate_pct": 100.0,
       "dated_items": 20,
-      "summary_len_median": 167
+      "summary_len_median": 168
     },
     {
       "id": "devto_ai",
@@ -112,14 +119,15 @@
       "url": "https://dev.to/feed/tag/ai",
       "status": 200,
       "retried_after": null,
-      "elapsed_s": 0.31,
+      "elapsed_s": 0.17,
       "items": 12,
       "oss_url_rate_pct": 25.0,
       "relevance_rate_pct": 83.3,
       "noise_rate_pct": 16.7,
       "fresh_48h_rate_pct": 100.0,
+      "fresh_72h_rate_pct": 100.0,
       "dated_items": 12,
-      "summary_len_median": 3860
+      "summary_len_median": 7033
     }
   ]
 }
