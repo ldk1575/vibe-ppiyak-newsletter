@@ -1,0 +1,155 @@
+# ==============================================================================
+# 나만의 뉴스레터 에이전트 설정 파일 (audience.yaml)
+# 브랜드: 🐣 바이브삐약 오픈소스 (Vibe-Ppiyak OpenSource)
+# 주제: 깃허브 트렌드 인기 오픈소스 큐레이션
+# 타깃 독자: AI 에이전트 입문자 및 바이브코딩(Vibe Coding) 입문자
+# 코드는 이 파일만 읽는다 — 독자·기준을 바꾸려면 코드가 아니라 이 파일을 고친다.
+# ==============================================================================
+
+newsletter:
+  name: "🐣 바이브삐약 오픈소스 모닝 브리핑"
+  bot_name: "🐣 코딩삐약이"
+  channel_name: "🐣｜바이브삐약-오픈소스"
+  topic: "GitHub 트렌드 인기 오픈소스 및 AI 에이전트·바이브코딩 도구"
+  schedule: "매일 오전 08:00 KST (GitHub Actions cron '0 23 * * *' UTC)"
+
+audience:
+  persona: "AI 에이전트 구축과 바이브코딩(Claude Code, Cursor, Codex, MCP 등)에 막 입문한 병아리 개발자 및 빌더"
+  pain_points:
+    - "매일 쏟아지는 오픈소스 중 입문자(병아리)가 바로 설치해 써볼 수 있는 프로젝트가 무엇인지 구분하기 어렵다."
+    - "단순 기능 나열만 보고는 내 에이전트 실습이나 코딩 자동화에 어떻게 적용할지 감이 오지 않는다."
+  desired_tone: "친절하고 귀여우면서도 핵심을 콕 짚어주는 실전 가이드 톤 (어려운 기술 용어는 입문자 눈높이로 쉽게 설명)"
+
+sources:
+  # 금지된 6개 RSS 목록 (수집 단계에서 하드 차단 — 채택 목록에 섞이면 실행 자체를 거부)
+  excluded_urls:
+    - "https://openai.com/blog/rss.xml"
+    - "https://deepmind.google/blog/rss.xml"
+    - "https://techcrunch.com/category/artificial-intelligence/feed/"
+    - "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+    - "https://www.technologyreview.com/feed/"
+    - "https://www.aitimes.com/rss/allArticle.xml"
+  # 도메인 단위로도 막는다 (URL 끝 슬래시·쿼리만 바꿔 우회하는 것 방지)
+  excluded_domains:
+    - "openai.com"
+    - "deepmind.google"
+    - "techcrunch.com"
+    - "theverge.com"
+    - "technologyreview.com"
+    - "aitimes.com"
+
+  max_items_per_source: 25   # 소스 하나가 후보를 독식하지 않도록 상한
+  max_age_hours: 72          # 발행 시각이 있는 글은 72시간 이내만 (시각이 없는 글은 통과)
+
+  # 채택된 3개 핵심 수집 채널 (근거는 REPORT.md '소스 채택표', 측정값은 store/source_measurement.json)
+  adopted:
+    - id: "github_trending"
+      name: "GitHub Trending Daily"
+      url: "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml"
+      backup_url: "https://mshibanami.github.io/GitHubTrendingRSS/daily/python.xml"
+      category: "open_source_repo"
+      reason: "일간 급상승 오픈소스 저장소를 저장소 직링크 + README 요약과 함께 XML로 제공"
+
+    - id: "geeknews"
+      name: "GeekNews"
+      url: "https://news.hada.io/rss/news"
+      backup_url: "https://feeds.feedburner.com/geeknews-feed"
+      category: "korean_tech_community"
+      reason: "국내 개발자 커뮤니티의 오픈소스·AI 에이전트 도구 소개(Show GN)를 한국어 맥락과 함께 제공"
+
+    - id: "hackernews_show"
+      name: "Hacker News: Show HN (points>=20)"
+      url: "https://hnrss.org/show?points=20"
+      category: "global_maker_launch"
+      reason: "개발자가 직접 공개한 신규 오픈소스·CLI 도구 중 커뮤니티 추천 20점 이상만"
+
+# 🏆 오늘의 GitHub 트렌딩 스타 순위 (큐레이션과 별도 섹션 — 선별·검수를 거치지 않는 '사실 표')
+# 오늘 트렌딩에 오른 저장소를 GitHub REST API 의 누적 스타 수(stargazers_count)로 줄 세워 1~top_n 위를 싣는다.
+# 숫자는 API 값을 그대로 쓰므로 LLM 이 만들 여지가 없다.
+github_ranking:
+  enabled: true
+  source_id: "github_trending"   # 이 소스의 피드에서 후보 저장소를 뽑는다
+  extra_feeds:                   # 후보가 top_n 보다 적은 날 채우는 피드
+    - "https://mshibanami.github.io/GitHubTrendingRSS/daily/python.xml"
+    - "https://mshibanami.github.io/GitHubTrendingRSS/daily/typescript.xml"
+  top_n: 10
+  sort_by: "stargazers_count"
+
+selection_criteria:
+  # 중요도 판단 핵심 문장 — 예선·본선 프롬프트가 모두 이 문장을 기준으로 삼는다
+  importance_question: >
+    이 오픈소스 또는 개발 도구는 AI 에이전트·바이브코딩 입문자가 복잡한 인프라 구축 없이
+    오늘 설치해 자신의 코딩 자동화나 에이전트 워크플로우 실습에 바로 적용할 수 있는가?
+
+  # 2-A. 예선(Prelim) 필터링 설정
+  preliminary:
+    batch_size: 10  # 1회 LLM 호출당 묶음 크기 (근거: tools/batch_experiment.py 실측, REPORT.md 3절)
+    dedup_days: 7   # 최근 7일 안에 발행한 URL은 예선에서 규칙 탈락
+    # 영문 키워드는 단어 경계로 매칭한다 (예: crypto 가 cryptography 에 걸리지 않게)
+    include_keywords:
+      - "agent"
+      - "agents"
+      - "agentic"
+      - "mcp"
+      - "claude"
+      - "cursor"
+      - "codex"
+      - "vibe"
+      - "llm"
+      - "open-source"
+      - "open source"
+      - "github.com"
+      - "cli"
+      - "workflow"
+      - "rag"
+      - "에이전트"
+      - "오픈소스"
+      - "클로드"
+    exclude_keywords:
+      - "채용"
+      - "hiring"
+      - "주가"
+      - "구인"
+      - "정치"
+      - "소송"
+      - "암호화폐"
+      - "crypto"
+      - "blockchain"
+      - "jailbreak"   # 입문자 뉴스레터에 탈옥 프롬프트 모음을 싣지 않는다 (스타 순위표에도 적용)
+      - "jailbreaks"
+
+  # 2-B. 본선(Final) 중요도 채점 기준 및 가중치
+  final_scoring:
+    batch_size: 10   # 본선도 묶음 채점 (기사 1건 1호출 → 묶음 1호출, 무료 한도 대비)
+    top_k: 4         # 최종 선발 상한 (3~5건 요건)
+    min_k: 3         # 최종 선발 하한 — min_score 통과가 모자라면 차점자로 채우고 로그에 표시
+    min_score: 0.70  # 본선 통과 최소 중요도 점수 (0.0 ~ 1.0)
+    max_per_source: 2  # 한 소스에서 최대 2건 (뉴스레터 다양성)
+    weights:
+      beginner_accessibility: 0.40  # 입문자 접근성 (설치 난이도, README 예제 충실도, 무료/로컬 실행 가능 여부)
+      vibe_coding_utility: 0.40     # 실전 활용성 (바이브코딩 워크플로우나 에이전트 실습에 즉시 결합 가능한가)
+      trend_momentum: 0.20          # 화제성 (스타 급상승, 커뮤니티 토론 활성도)
+    rubric_prompt: >
+      당신은 'AI 에이전트 및 바이브코딩 입문자(병아리 빌더)'를 위한 수석 큐레이터 '코딩삐약이'입니다.
+      각 오픈소스/기사를 (1) 입문자 접근성(40%), (2) 바이브코딩·에이전트 실전 활용성(40%), (3) 트렌드 화제성(20%)
+      기준으로 각각 0.0~1.0 점수로 채점하고, 왜 이 점수를 부여했는지 1문장의 근거(score_reason)를 남기세요.
+      AI 에이전트·코딩 도구와 무관한 일반 소식은 활용성 점수를 0.3 이하로 주세요.
+
+summarize:
+  max_body_chars: 6000   # 본문(README) 최대 글자 수 — 길면 앞부분만
+  min_body_chars: 300    # 이보다 짧으면 RSS 요약으로 대체하고 body_source=rss_fallback 로 기록
+  # 봇 요청에 403 을 주는 곳은 크롤링하지 않고 RSS 본문만 쓴다 (2026-10-29 확인: news.hada.io 토픽 페이지 403)
+  no_fetch_domains:
+    - "news.hada.io"
+
+evaluation_and_retry:
+  max_retries: 2  # 검수 불통과 시 요약 재생성 최대 횟수 (그래도 불통과면 skip — 나머지 기사는 발행)
+  checks:
+    - "원문(full_text 또는 raw_summary)에 없는 기능이나 GitHub 스타 수를 지어내지 않았는가? (Hallucination 검증)"
+    - "단순 번역/요약에 그치지 않고 입문자가 어떻게 써볼 수 있는지 실전 인사이트(활용 팁, 난이도)가 포함되었는가?"
+    - "원문 링크(URL)와 프로젝트 고유명사가 정확히 보존되었는가?"
+
+publishing:
+  output_dir: "output"
+  store_dir: "store"
+  discord_webhook_env: "DISCORD_WEBHOOK_URL"

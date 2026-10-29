@@ -1,0 +1,362 @@
+{
+  "measured_at": "2026-10-29T06:54:45.329576+00:00",
+  "model": "gemini-flash-latest",
+  "candidates": 40,
+  "rows": [
+    {
+      "batch_size": 5,
+      "calls": 8,
+      "failed_calls": 0,
+      "seconds": 61.34,
+      "missing": 0,
+      "missing_rate_pct": 0.0,
+      "passed": 16,
+      "pass_rate_pct": 40.0,
+      "agreement_with_majority_pct": 100.0
+    },
+    {
+      "batch_size": 10,
+      "calls": 4,
+      "failed_calls": 0,
+      "seconds": 27.2,
+      "missing": 0,
+      "missing_rate_pct": 0.0,
+      "passed": 17,
+      "pass_rate_pct": 42.5,
+      "agreement_with_majority_pct": 97.5
+    },
+    {
+      "batch_size": 30,
+      "calls": 2,
+      "failed_calls": 0,
+      "seconds": 23.09,
+      "missing": 0,
+      "missing_rate_pct": 0.0,
+      "passed": 16,
+      "pass_rate_pct": 40.0,
+      "agreement_with_majority_pct": 95.0
+    }
+  ],
+  "per_article": [
+    {
+      "id": "06fe3ce0",
+      "title": "elayadesign/ai-design-skills",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "c88c01cf",
+      "title": "Nutlope/hallmark",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "6acc383a",
+      "title": "nightly-labs/openbot",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "c3257d53",
+      "title": "obra/superpowers",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "be8acfaf",
+      "title": "pbakaus/impeccable",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "19f0bb06",
+      "title": "makecindy/cindy",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "e754f540",
+      "title": "gitroomhq/postiz-app",
+      "source": "github_trending",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "a90d342e",
+      "title": "affaan-m/ECC",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "bca7775a",
+      "title": "HKUDS/DeepTutor",
+      "source": "github_trending",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "9fe0ab02",
+      "title": "JetBrains/thinkrail",
+      "source": "github_trending",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "4f44d6ba",
+      "title": "togg53192-cmd/jailbreaks",
+      "source": "github_trending",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "90fd1ae8",
+      "title": "Claude Code는 각 백그라운드 에이전트의 대화 기록을 주기적으로 해당 모델에 전송함",
+      "source": "geeknews",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "04798cf8",
+      "title": "Show GN: knock - 클로드 코드로 일하는 척하면서 친구랑 점심 메뉴 정하기",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": true
+    },
+    {
+      "id": "12e40986",
+      "title": "Show GN: anti-stuck - Claude Code가 멈춘 명령·서브에이전트를 영원히 기다리지 않게 하는 플러그인",
+      "source": "geeknews",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "61ac8a00",
+      "title": "건강 근황",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "24fa596b",
+      "title": "GOTO는 정말 끝내준다(C 오류 처리에서)",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "448dc49b",
+      "title": "StackOverflow의 월간 질문 수, 이제 1,000건 미만",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "006b1259",
+      "title": "Qwenputer: Qwen3.5 내부에서 작동하는 결정론적 RISC-V CPU",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "77427f62",
+      "title": "Show GN: 생성형 LLM 없이 만든 실시간 음성 예약 봇 데모 - jev 활용기",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "0486257b",
+      "title": "Show GN: Ferryx - Windows·Linux에서도 쓸 수 있는 코딩 에이전트용 네이티브 터미널",
+      "source": "geeknews",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "8d58da35",
+      "title": "Nanbeige4.3 33B, 한국어 문서 RAG 299문항 직접 채점: 공식 벤치마크에선 qwen3.8 27B를 이겼지만 한국...",
+      "source": "geeknews",
+      "b5": true,
+      "b10": true,
+      "b30": false
+    },
+    {
+      "id": "27b98a00",
+      "title": "온라인 게임 개발자가 말하는 렉과 서버비",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "fd99acdb",
+      "title": "kern - AI 생성 코드를 매번 새 컨테이너에서 실행하는 경량 루트리스 런타임",
+      "source": "geeknews",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "2a7793fb",
+      "title": "AAII v5 공개 - 비공개 평가 비중을 60%로 높인 AI 모델 역량 지수",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "71e616dd",
+      "title": "NVIDIA Nemotron 3.5 Transcribe - 한국어 포함 40개 언어를 지원하는 공개 음성 인식 모델",
+      "source": "geeknews",
+      "b5": false,
+      "b10": true,
+      "b30": false
+    },
+    {
+      "id": "15ab0697",
+      "title": "이대로는 지속 가능하지 않다 - 취약점 공개 속도를 따라가지 못하는 보안 대응",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "04c82d24",
+      "title": "잠복 ICE 요원 포함 미국 국토안보부 인력 4만 1,000명 이상의 정보 유출",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "6795b2ce",
+      "title": "Show GN: 배틀즈 - 컴퓨터 연습과 친구 온라인 대전을 제공하는 보드게임 모음",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "fa5d5d5c",
+      "title": "Meta, 전국 캠페인 도중 No Kings Instagram 계정을 검열",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "cab2dcf1",
+      "title": "AlpineBSD - NetBSD 기반에 Alpine Linux 스타일의 사용자 공간을 결합한 운영체제",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "b6469e58",
+      "title": "DAYJOB: Tax - 전문 세무 과제 50개로 AI 에이전트 평가하기",
+      "source": "geeknews",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "9ce7d53b",
+      "title": "winevdm - 64비트 Windows에서 16비트 Windows 프로그램 실행하기",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "2ddefc6c",
+      "title": "나는 여전히 OpenGL ES 3.0을 가르친다",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "6ce1bda6",
+      "title": "이 브라우저 지문 수집 스크립트는 왜 생물무기를 만들고 있을까?",
+      "source": "geeknews",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "7a707f2e",
+      "title": "Show HN: SlideBySide – Present slides without sharing your screen",
+      "source": "hackernews_show",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "b665fb90",
+      "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days",
+      "source": "hackernews_show",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "88bab6be",
+      "title": "Show HN: Nasscad – local-first 3D CAD for browser and Windows",
+      "source": "hackernews_show",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "d1c56855",
+      "title": "Show HN: Specification First Agentic Development Plugin and Prove",
+      "source": "hackernews_show",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    },
+    {
+      "id": "83360a32",
+      "title": "Show HN: Wraps – Resend-style email on your own AWS SES, open source",
+      "source": "hackernews_show",
+      "b5": false,
+      "b10": false,
+      "b30": false
+    },
+    {
+      "id": "ee3cd203",
+      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+      "source": "hackernews_show",
+      "b5": true,
+      "b10": true,
+      "b30": true
+    }
+  ]
+}

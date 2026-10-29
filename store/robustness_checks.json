@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-10-29T06:52:13.108617+00:00",
+  "results": {
+    "C1_forbidden_source_rejected": {
+      "passed": true,
+      "detail": "금지된 RSS 소스가 설정에 포함되어 있습니다: https://techcrunch.com/category/artificial-intelligence/feed/"
+    },
+    "C2_broken_source_isolated": {
+      "passed": true,
+      "detail": {
+        "source_counts": {
+          "github_trending": 11,
+          "geeknews": 0,
+          "hackernews_show": 6,
+          "hackernews_show_too_old_dropped": 14
+        },
+        "source_errors": {
+          "geeknews": "https://news.hada.io/rss/does-not-exist → HTTPError: 404 Client Error: Not Found for url: https://news.hada.io/rss/does-not-exist (건너뜀)"
+        }
+      }
+    },
+    "C3_number_rule": {
+      "passed": true,
+      "detail": {
+        "wrong_summary_flags": [
+          "120",
+          "34,000"
+        ],
+        "good_summary_flags": []
+      }
+    },
+    "C4_llm_catches_fake_feature": {
+      "passed": true,
+      "detail": {
+        "llm_passed": false,
+        "feedback": "3줄 요약에 원문에 없는 허위 기능 및 잘못된 정보(환각)가 다수 포함되어 있습니다. 1) 원문에서는 Windows를 아직 지원하지 않고 지원 예정(planned)이라고 명시되어 있으나 'Windows 전용 GUI 설치 프로그램과 클라우드 동기화 기능'을 제공한다고 왜곡했습니다. 2) 원문에 명시되지 않은 '브라우저 자동화와 이미지 생성 도구'가 내장되어 있다고 창작했습니다. 요약 2, 3번째 항목을 원문에 기반한 사실(예: Claude Code 및 Cursor 연동 지원, 파일 검색 및 셸 명령 등 12가지 로컬 도구 제공, macOS 및 Linux 지원, 출시 첫 주 3,400 스타 달성 등)로 전면 수정하세요."
+      }
+    },
+    "C5_keyword_word_boundary": {
+      "passed": true,
+      "detail": {
+        "cryptography": null,
+        "crypto": "crypto",
+        "korean": "에이전트"
+      }
+    }
+  }
+}
