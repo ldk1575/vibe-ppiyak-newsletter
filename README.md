@@ -34,7 +34,7 @@ python run.py --send      # 디스코드 발송
 
 ## 자동 발행 (GitHub Actions)
 
-`.github/workflows/newsletter.yml` — 매일 23:00 UTC(= 08:00 KST) + Actions 탭의 **Run workflow** 버튼.
+`.github/workflows/newsletter.yml` — 매일 22:17 UTC(= 07:17 KST, 정각 고부하를 피해 당김) + Actions 탭의 **Run workflow** 버튼.
 저장소 **Settings ▸ Secrets and variables ▸ Actions** 에 `GEMINI_API_KEY`, `DISCORD_WEBHOOK_URL` 을 넣으면 동작하고,
 실행이 끝나면 `output/` 과 `store/` 를 봇이 커밋해 실행 기록이 저장소에 쌓입니다.
 

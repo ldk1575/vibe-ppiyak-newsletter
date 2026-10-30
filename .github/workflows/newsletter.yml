@@ -1,4 +1,4 @@
-# 🐣 바이브삐약 오픈소스 모닝 브리핑 — 매일 08:00 KST 자동 발행
+# 🐣 바이브삐약 오픈소스 모닝 브리핑 — 매일 아침 자동 발행 (07:17 KST 예약)
 # 비밀값은 저장소 Settings ▸ Secrets and variables ▸ Actions 에 둔다:
 #   GEMINI_API_KEY, DISCORD_WEBHOOK_URL
 # 실행이 끝나면 output/ 과 store/ 변경을 저장소에 커밋해 실행 기록을 쌓는다.
@@ -6,7 +6,9 @@ name: newsletter
 
 on:
   schedule:
-    - cron: "0 23 * * *"   # UTC 23:00 = KST 08:00 (GitHub 스케줄은 수 분~수십 분 늦을 수 있다)
+    # UTC 22:17 = KST 07:17. 정각(0분)은 GitHub 스케줄 고부하 시간이라 피한다 —
+    # "0 23 * * *" 였던 10/30 첫 예약 실행은 3시간 12분 늦은 11:12 KST 에야 돌았다.
+    - cron: "17 22 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

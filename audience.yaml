@@ -11,7 +11,7 @@ newsletter:
   bot_name: "🐣 코딩삐약이"
   channel_name: "🐣｜바이브삐약-오픈소스"
   topic: "GitHub 트렌드 인기 오픈소스 및 AI 에이전트·바이브코딩 도구"
-  schedule: "매일 오전 08:00 KST (GitHub Actions cron '0 23 * * *' UTC)"
+  schedule: "매일 오전 07:17 KST 예약 (GitHub Actions cron '17 22 * * *' UTC — 정각 고부하를 피해 당김, 지연 시 8시 전후 도착)"
 
 audience:
   persona: "AI 에이전트 구축과 바이브코딩(Claude Code, Cursor, Codex, MCP 등)에 막 입문한 병아리 개발자 및 빌더"
