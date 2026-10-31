@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🐣 바이브삐약 오픈소스 모닝 브리핑 - 2026-10-31</title>
+<style>
+  body { font-family: 'Pretendard', 'Malgun Gothic', -apple-system, sans-serif; background: #fffbeb; color: #1e293b; max-width: 820px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+  .header h1 { margin: 0 0 8px 0; font-size: 24px; color: #b45309; }
+  .header p { margin: 4px 0; color: #78350f; font-size: 14px; font-weight: 500; }
+  .card { background: #ffffff; border: 1px solid #fde68a; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08); }
+  .card h2 { margin: 10px 0 8px 0; font-size: 19px; }
+  .card h2 a { color: #1e293b; text-decoration: none; }
+  .card h2 a:hover { color: #d97706; text-decoration: underline; }
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge { font-size: 12px; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+  .badge.source { background: #f1f5f9; color: #475569; }
+  .badge.score { background: #fef3c7; color: #b45309; }
+  .badge.diff { background: #dcfce7; color: #166534; }
+  .badge.eval { background: #e0e7ff; color: #3730a3; }
+  .badge.preview { background: #fce7f3; color: #9d174d; }
+  .reason { font-size: 13px; color: #64748b; margin-bottom: 14px; }
+  .summary-box { background: #f8fafc; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .summary-box h3, .insight-box h3 { margin: 0 0 6px 0; font-size: 14px; color: #b45309; }
+  .insight-box { background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 16px; }
+  .ranking table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .ranking th { text-align: left; color: #b45309; font-size: 12px; border-bottom: 2px solid #fde68a; padding: 6px 8px; }
+  .ranking td { border-bottom: 1px solid #fef3c7; padding: 8px; vertical-align: top; }
+  .ranking td.rk { font-weight: 700; color: #b45309; width: 32px; text-align: center; }
+  .ranking td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .ranking a { color: #1e293b; font-weight: 600; text-decoration: none; }
+  .ranking .desc { color: #64748b; font-size: 12px; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🐣 바이브삐약 오픈소스 모닝 브리핑</h1>
+    <p>발행일: 2026-10-31 | 큐레이터: 🐣 코딩삐약이 | 타깃: AI 에이전트 · 바이브코딩 입문자</p>
+    <p>수집 51건 → 예선 13건 → 본선 4건 → 최종 발행 4건 💌</p>
+  </div>
+  
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.92</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>1. <a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 세션 간 기억을 자동으로 압축·주입해 에이전트의 단기 기억 문제를 손쉽게 해결해 주는 필수형 도구입니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Claude Code 등 AI 코딩 환경에서 세션이 끝나거나 재연결되어도 프로젝트 맥락을 잃지 않도록 돕는 영구 메모리 압축 시스템입니다.<br>- 도구 사용 관찰 내용을 자동으로 캡처하고 의미론적 요약을 생성하여 다음 세션에 필요한 컨텍스트를 주입합니다.<br>- 계층적 메모리 검색(Progressive Disclosure), 프로젝트 기록 검색 스킬, 민감 정보를 가려주는 &lt;private&gt; 태그 등의 기능을 제공합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>AI 코딩 세션을 새로 열 때마다 이전 작업 내용을 다시 설명하느라 번거로웠다면, 터미널에서 `npx claude-mem install`을 실행하거나 Claude Code 내에서 `/plugin install claude-mem`으로 바로 세팅해 보세요! 메모리 프로바이더로 기본 옵저버 외에도 본인의 Gemini, OpenRouter 키 또는 Anthropic 플랜을 연결해 이전 세션의 작업 맥락을 자연스럽게 이어갈 수 있답니다.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.9</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>2. <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> Claude Code, Cursor 등 다양한 코딩 에이전트에 즉시 조합해 쓸 수 있는 실전 스킬 프레임워크로 바이브코딩 입문자에게 매우 유용합니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Superpowers는 코딩 에이전트가 무작정 코드부터 작성하지 않고 의도를 파악하여 요구사항을 정리하고 단계별 구현 계획을 세우도록 돕는 소프트웨어 개발 방법론 프레임워크입니다.<br>- 레드/그린 TDD(테스트 주도 개발), YAGNI, DRY 원칙을 강조하며 서브에이전트 기반으로 태스크를 검토하고 자율적으로 수행하게 만듭니다.<br>- Claude Code, Cursor, Codex, Gemini CLI 등 다양한 에이전트 도구 환경에 플러그인 또는 확장 형태로 간편하게 설치할 수 있습니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>Claude Code나 Cursor에서 명령어 한 줄로 플러그인을 설치하기만 하면 에이전트의 스킬이 자동으로 트리거됩니다. 바로 코드를 짜달라고 요청하기 전에 에이전트가 요구사항 명세와 구현 계획부터 꼼꼼히 정리해주므로, 에이전트가 엉뚱한 방향으로 코드를 작성해 헤매는 현상을 막고 안정적으로 개발을 진행할 수 있어요!</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">Hacker News: Show HN (points&gt;=20)</span>
+      <span class="badge score">중요도 0.8</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>3. <a href="https://www.arsaze.com" target="_blank" rel="noopener">Show HN: Arsaze – Cursor for video editing (Tab-complete and agent edits)</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> Cursor 스타일의 탭 자동완성과 에이전트를 영상 편집에 접목해 직관적인 UI로 쉽게 접근할 수 있으나, 코딩 자체보다는 영상 작업 자동화에 특화되어 있습니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Arsaze는 코딩 도구인 Cursor처럼 탭(Tab) 자동완성과 AI 에이전트 명령 방식을 도입한 영상 편집 도구입니다.<br>- 한 번 컷 편집을 하면 다음 편집을 타임라인에 미리 보여주며, Tab을 눌러 적용하거나 Esc로 넘길 수 있고 문서처럼 글자를 지워 편집하는 Rewrite 기능도 제공합니다.<br>- Claude, ChatGPT, Gemini, Codex, Cursor 등 평소 사용하는 AI를 연결해 실제 멀티트랙 타임라인 편집, 무음/추임새 제거, 자막 생성, 프레임 메모 기반 수정을 지시할 수 있습니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>바이브코딩과 Cursor 스타일에 익숙한 입문자라면 별도의 복잡한 영상 편집 툴을 새로 배울 필요 없이 익숙한 프롬프트 명령과 Tab 키 자동완성으로 데모 영상이나 숏폼 콘텐츠를 빠르게 다듬을 수 있습니다. 신용카드 등록 없이 arsaze.com에서 구글 계정 등으로 무료 가입해 웹 브라우저나 데스크톱 앱에서 바로 프로젝트에 영상을 올리고 자신의 AI를 연동해 실습해 보세요!</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GeekNews</span>
+      <span class="badge score">중요도 0.75</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span><span class="badge preview">📎 미리보기 기반 요약</span>
+    </div>
+    <h2>4. <a href="https://news.hada.io/topic?id=36298" target="_blank" rel="noopener">Show GN: WORLD MODEL - 지금 쓸 수 있는 세계 AI 모델 1,100여 개를 한눈에 보는 도감</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 1,100여 개 AI 모델을 쉽게 탐색할 수 있는 훌륭한 도감이지만, 직접 실행 가능한 코딩 자동화 도구 자체는 아닙니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- 전 세계 138곳 개발사의 AI 모델 1,100여 개를 공식 발표 기준으로 모아 정리한 도감 사이트입니다.<br>- 대화, 이미지, 영상, 비전, 3D, 검색 등 다양한 세부 분야별로 모델이 분류되어 있습니다.<br>- 국가, 분야, 로컬 실행 가능 여부 등으로 필터링해 찾아보거나 지구본 형태로 국가별 탐색이 가능합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>내 프로젝트에 맞는 AI 모델을 고를 때 로컬 실행 가능 여부나 세부 분야 필터를 활용해 원하는 모델을 빠르게 탐색해보세요! 다양한 개발사의 최신 모델 목록을 한곳에서 둘러보며 실습에 도입할 후보를 정하기에 좋습니다.</p></div>
+  </div>
+  <div class="card ranking">
+    <h2>🏆 오늘의 GitHub 트렌딩 TOP 10 (⭐ 누적 스타 순)</h2>
+    <p class="reason">오늘 GitHub Trending 에 오른 저장소를 GitHub API 의 누적 스타 수로 줄 세웠어요. 숫자는 2026-10-31 10:34 KST 기준.</p>
+    <table><thead><tr><th>순위</th><th>저장소</th><th>스타</th><th>포크</th><th>언어</th></tr></thead><tbody>
+        <tr><td class="rk">1</td><td><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a>
+          <div class="desc">An agentic skills framework &amp; software development methodology that works.</div></td>
+          <td class="num">⭐ 309,450</td><td class="num">27,529</td><td>Shell</td></tr>
+        <tr><td class="rk">2</td><td><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a>
+          <div class="desc">Persistent Context Across Sessions for Every Agent –  Captures everything your agent does…</div></td>
+          <td class="num">⭐ 106,288</td><td class="num">9,356</td><td>TypeScript</td></tr>
+        <tr><td class="rk">3</td><td><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">pbakaus/impeccable</a>
+          <div class="desc">The design vocabulary for your coding agent. Steer with polish and bolder, review with cr…</div></td>
+          <td class="num">⭐ 97,101</td><td class="num">5,717</td><td>Rust</td></tr>
+        <tr><td class="rk">4</td><td><a href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener">HKUDS/DeepTutor</a>
+          <div class="desc">DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.</div></td>
+          <td class="num">⭐ 51,800</td><td class="num">6,346</td><td>Python</td></tr>
+        <tr><td class="rk">5</td><td><a href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener">Donchitos/Claude-Code-Game-Studios</a>
+          <div class="desc">Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a co…</div></td>
+          <td class="num">⭐ 30,452</td><td class="num">4,173</td><td>Shell</td></tr>
+        <tr><td class="rk">6</td><td><a href="https://github.com/elayadesign/ai-design-skills" target="_blank" rel="noopener">elayadesign/ai-design-skills</a>
+          <div class="desc"></div></td>
+          <td class="num">⭐ 12,881</td><td class="num">942</td><td>Python</td></tr>
+        <tr><td class="rk">7</td><td><a href="https://github.com/CopilotKit/OpenBot" target="_blank" rel="noopener">CopilotKit/OpenBot</a>
+          <div class="desc">Open-source AI coworkers that each get a computer of their own: a browser, files and tool…</div></td>
+          <td class="num">⭐ 8,810</td><td class="num">1,110</td><td>TypeScript</td></tr>
+        <tr><td class="rk">8</td><td><a href="https://github.com/milind-soni/OpenMausBot" target="_blank" rel="noopener">milind-soni/OpenMausBot</a>
+          <div class="desc">Open-source Grok Bot alternative with a virtual machine that bots can use</div></td>
+          <td class="num">⭐ 8,677</td><td class="num">1,202</td><td>TypeScript</td></tr>
+        <tr><td class="rk">9</td><td><a href="https://github.com/JetBrains/thinkrail" target="_blank" rel="noopener">JetBrains/thinkrail</a>
+          <div class="desc">Vibe code with pi in a lightweight, real IDE that customises itself around the way you wo…</div></td>
+          <td class="num">⭐ 6,594</td><td class="num">358</td><td>TypeScript</td></tr>
+        <tr><td class="rk">10</td><td><a href="https://github.com/nightly-labs/openbot" target="_blank" rel="noopener">nightly-labs/openbot</a>
+          <div class="desc">A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok …</div></td>
+          <td class="num">⭐ 4,236</td><td class="num">398</td><td>TypeScript</td></tr>
+    </tbody></table>
+  </div>
+</body>
+</html>
