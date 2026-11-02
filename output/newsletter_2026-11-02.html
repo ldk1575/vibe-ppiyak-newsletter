@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🐣 바이브삐약 오픈소스 모닝 브리핑 - 2026-11-02</title>
+<style>
+  body { font-family: 'Pretendard', 'Malgun Gothic', -apple-system, sans-serif; background: #fffbeb; color: #1e293b; max-width: 820px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+  .header h1 { margin: 0 0 8px 0; font-size: 24px; color: #b45309; }
+  .header p { margin: 4px 0; color: #78350f; font-size: 14px; font-weight: 500; }
+  .card { background: #ffffff; border: 1px solid #fde68a; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08); }
+  .card h2 { margin: 10px 0 8px 0; font-size: 19px; }
+  .card h2 a { color: #1e293b; text-decoration: none; }
+  .card h2 a:hover { color: #d97706; text-decoration: underline; }
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge { font-size: 12px; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+  .badge.source { background: #f1f5f9; color: #475569; }
+  .badge.score { background: #fef3c7; color: #b45309; }
+  .badge.diff { background: #dcfce7; color: #166534; }
+  .badge.eval { background: #e0e7ff; color: #3730a3; }
+  .badge.preview { background: #fce7f3; color: #9d174d; }
+  .reason { font-size: 13px; color: #64748b; margin-bottom: 14px; }
+  .summary-box { background: #f8fafc; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .summary-box h3, .insight-box h3 { margin: 0 0 6px 0; font-size: 14px; color: #b45309; }
+  .insight-box { background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 16px; }
+  .ranking table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .ranking th { text-align: left; color: #b45309; font-size: 12px; border-bottom: 2px solid #fde68a; padding: 6px 8px; }
+  .ranking td { border-bottom: 1px solid #fef3c7; padding: 8px; vertical-align: top; }
+  .ranking td.rk { font-weight: 700; color: #b45309; width: 32px; text-align: center; }
+  .ranking td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .ranking a { color: #1e293b; font-weight: 600; text-decoration: none; }
+  .ranking .desc { color: #64748b; font-size: 12px; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🐣 바이브삐약 오픈소스 모닝 브리핑</h1>
+    <p>발행일: 2026-11-02 | 큐레이터: 🐣 코딩삐약이 | 타깃: AI 에이전트 · 바이브코딩 입문자</p>
+    <p>수집 56건 → 예선 12건 → 본선 4건 → 최종 발행 4건 💌</p>
+  </div>
+  
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.91</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>1. <a href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">pingdotgg/t3code</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 모바일과 데스크톱 GUI로 Claude Code, Cursor 등 다양한 로컬 에이전트를 손쉽게 통합 제어할 수 있어 입문자에게 최적입니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- 내 컴퓨터에 설치된 다양한 AI 코딩 에이전트들을 모바일(iOS, Android), 웹, Electron 데스크톱 앱으로 통합 제어할 수 있는 오픈소스 도구입니다.<br>- Claude Code, Codex, Cursor, Grok Build, OpenCode, Google Antigravity, fx 등 여러 에이전트 구독 및 환경과 연동하여 동작합니다.<br>- 원격 접속 지원, MCP 연동, 다중 계정 설정, 백그라운드 서비스 실행(t3 service install) 기능 등을 제공합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>이미 Claude Code나 Cursor CLI를 사용하고 계신다면, 터미널 대신 모바일 앱이나 데스크톱 앱을 통해 편안하게 코딩 작업을 지시하고 모니터링할 수 있어요! 설치 없이 먼저 체험해보고 싶다면 터미널에서 `npx t3@latest`를 실행하여 바로 로컬 웹 인터페이스를 띄워보세요.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.9</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>2. <a href="https://github.com/Orkas-AI/Orkas" target="_blank" rel="noopener">Orkas-AI/Orkas</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 맥과 윈도우용 설치형 앱으로 Claude Code 및 내장 전문 에이전트 팀을 즉시 지휘할 수 있어 입문자의 바이브코딩 실습에 매우 적합합니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Orkas는 사용자의 목표를 완성된 작업물로 바꿔주는 로컬 우선(Local-first) 오픈소스(MIT) 멀티 에이전트 데스크톱 앱입니다.<br>- 총괄 지휘관(Commander)이 작업을 계획하고 16개의 내장 전문 에이전트 및 기존 코딩 에이전트(Claude Code, Codex 등)와 협업하여 일을 분배합니다.<br>- 프로젝트 단위의 메모리와 할 일 관리, 자동 진행(Auto-advance), 주기별 예약 자동화 기능을 갖추고 있으며 모든 데이터는 컴퓨터에 안전하게 보관됩니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>macOS나 Windows용 앱을 무료로 내려받고 기본 제공되는 500 크레딧을 쓰면 별도의 API 키 없이도 곧바로 에이전트 팀 협업을 실습해 볼 수 있어요! 평소 쓰던 Claude Code나 Codex와 연동하거나, ProductDeveloper 및 UIDesigner 같은 내장 에이전트에게 버그 수정과 UI 작업을 맡겨 바이브코딩 파이프라인을 구축해 보세요.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GeekNews</span>
+      <span class="badge score">중요도 0.85</span>
+      <span class="badge diff">🐥 보통 ★★☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span><span class="badge preview">📎 미리보기 기반 요약</span>
+    </div>
+    <h2>3. <a href="https://news.hada.io/topic?id=36426&amp;utm_source=geeknews&amp;utm_medium=rss&amp;utm_campaign=news" target="_blank" rel="noopener">OpenQodex - 코딩 에이전트의 변경을 별도 에이전트가 검증하는 코드 리뷰 도구</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 코딩 에이전트가 만든 변경 사항을 별도 에이전트로 손쉽게 검증할 수 있어 바이브코딩 안전망 구축에 즉시 도움이 됩니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- OpenQodex는 기존 로그인 계정을 활용해 코딩 에이전트의 변경 사항을 별도의 Claude Code 또는 Codex 프로세스로 리뷰해 주는 도구예요.<br>- 미푸시 커밋과 미커밋 변경 전체를 기본 검사하며, 특정 브랜치, PR, 저장소 전체 리뷰도 지원해요.<br>- 22개 내장 스캐너를 통해 비밀키 등을 점검할 수 있어요.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>코딩 에이전트에게 맡긴 코드 변경 사항을 미처 커밋하기 전에 별도의 Claude Code나 Codex 프로세스로 꼼꼼하게 교차 검증받아 볼 수 있어요! 22개 내장 스캐너로 비밀키 유출 등 위험 요소를 미리 걸러내어 안전하게 바이브코딩을 진행하는 실전 가드레일로 활용해 보세요.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">Hacker News: Show HN (points&gt;=20)</span>
+      <span class="badge score">중요도 0.76</span>
+      <span class="badge diff">🐥 보통 ★★☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>4. <a href="https://sketch.wakeshift.ai/games/q5ucru" target="_blank" rel="noopener">Show HN: Sketch Stadium – watch your agent play Pictionary</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> AI 에이전트가 캐치마인드 게임 이벤트를 수신하고 상호작용하는 구조를 직관적으로 체험할 수 있어 에이전트 이벤트 처리 실습에 매우 유용합니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Sketch Stadium은 AI 에이전트를 연결하여 Pictionary(그림 퀴즈 게임)를 플레이하게 하고 관전할 수 있는 서비스입니다.<br>- 특정 에이전트가 그림을 그리면 다른 에이전트들이 글자 수 힌트 등을 보며 정답을 추측(Guesses)하는 방식으로 진행됩니다.<br>- 라운드별 점수판(Scoreboard)을 통해 여러 에이전트들의 획득 점수와 추측 기록을 실시간으로 확인할 수 있습니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>내가 만든 AI 에이전트를 외부 게임 환경에 연결해 실시간 이벤트와 힌트를 처리하는 상호작용 실습을 해볼 수 있어요! 다른 에이전트들과 정답 맞히기 경쟁을 시켜보며 에이전트의 실시간 추론 능력을 재미있게 테스트해보세요.</p></div>
+  </div>
+  <div class="card ranking">
+    <h2>🏆 오늘의 GitHub 트렌딩 TOP 10 (⭐ 누적 스타 순)</h2>
+    <p class="reason">오늘 GitHub Trending 에 오른 저장소를 GitHub API 의 누적 스타 수로 줄 세웠어요. 숫자는 2026-11-02 10:29 KST 기준.</p>
+    <table><thead><tr><th>순위</th><th>저장소</th><th>스타</th><th>포크</th><th>언어</th></tr></thead><tbody>
+        <tr><td class="rk">1</td><td><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">obra/superpowers</a>
+          <div class="desc">An agentic skills framework &amp; software development methodology that works.</div></td>
+          <td class="num">⭐ 310,645</td><td class="num">27,649</td><td>Shell</td></tr>
+        <tr><td class="rk">2</td><td><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a>
+          <div class="desc">Skills for Real Engineers. Straight from my .agents directory.</div></td>
+          <td class="num">⭐ 309,269</td><td class="num">26,029</td><td>Shell</td></tr>
+        <tr><td class="rk">3</td><td><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a>
+          <div class="desc">Persistent Context Across Sessions for Every Agent –  Captures everything your agent does…</div></td>
+          <td class="num">⭐ 109,329</td><td class="num">9,567</td><td>TypeScript</td></tr>
+        <tr><td class="rk">4</td><td><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">pbakaus/impeccable</a>
+          <div class="desc">The design vocabulary for your coding agent. Steer with polish and bolder, review with cr…</div></td>
+          <td class="num">⭐ 99,363</td><td class="num">5,877</td><td>Rust</td></tr>
+        <tr><td class="rk">5</td><td><a href="https://github.com/bregman-arie/devops-exercises" target="_blank" rel="noopener">bregman-arie/devops-exercises</a>
+          <div class="desc">Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform…</div></td>
+          <td class="num">⭐ 86,324</td><td class="num">20,576</td><td>Python</td></tr>
+        <tr><td class="rk">6</td><td><a href="https://github.com/HKUDS/DeepTutor" target="_blank" rel="noopener">HKUDS/DeepTutor</a>
+          <div class="desc">DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.</div></td>
+          <td class="num">⭐ 53,695</td><td class="num">6,565</td><td>Python</td></tr>
+        <tr><td class="rk">7</td><td><a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank" rel="noopener">THU-MAIC/OpenMAIC</a>
+          <div class="desc">Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experienc…</div></td>
+          <td class="num">⭐ 42,400</td><td class="num">6,529</td><td>TypeScript</td></tr>
+        <tr><td class="rk">8</td><td><a href="https://github.com/lightpanda-io/browser" target="_blank" rel="noopener">lightpanda-io/browser</a>
+          <div class="desc">Lightpanda: the headless browser designed for AI and automation</div></td>
+          <td class="num">⭐ 40,160</td><td class="num">1,966</td><td>Zig</td></tr>
+        <tr><td class="rk">9</td><td><a href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">pingdotgg/t3code</a>
+          <div class="desc"></div></td>
+          <td class="num">⭐ 38,071</td><td class="num">8,922</td><td>TypeScript</td></tr>
+        <tr><td class="rk">10</td><td><a href="https://github.com/vorssaint/vorssaint-utils" target="_blank" rel="noopener">vorssaint/vorssaint-utils</a>
+          <div class="desc">Free and open-source macOS menu bar toolkit.</div></td>
+          <td class="num">⭐ 32,332</td><td class="num">1,560</td><td>Swift</td></tr>
+    </tbody></table>
+  </div>
+</body>
+</html>
