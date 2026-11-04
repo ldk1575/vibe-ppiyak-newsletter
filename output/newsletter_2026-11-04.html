@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🐣 바이브삐약 오픈소스 모닝 브리핑 - 2026-11-04</title>
+<style>
+  body { font-family: 'Pretendard', 'Malgun Gothic', -apple-system, sans-serif; background: #fffbeb; color: #1e293b; max-width: 820px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+  .header h1 { margin: 0 0 8px 0; font-size: 24px; color: #b45309; }
+  .header p { margin: 4px 0; color: #78350f; font-size: 14px; font-weight: 500; }
+  .card { background: #ffffff; border: 1px solid #fde68a; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08); }
+  .card h2 { margin: 10px 0 8px 0; font-size: 19px; }
+  .card h2 a { color: #1e293b; text-decoration: none; }
+  .card h2 a:hover { color: #d97706; text-decoration: underline; }
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge { font-size: 12px; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+  .badge.source { background: #f1f5f9; color: #475569; }
+  .badge.score { background: #fef3c7; color: #b45309; }
+  .badge.diff { background: #dcfce7; color: #166534; }
+  .badge.eval { background: #e0e7ff; color: #3730a3; }
+  .badge.preview { background: #fce7f3; color: #9d174d; }
+  .reason { font-size: 13px; color: #64748b; margin-bottom: 14px; }
+  .summary-box { background: #f8fafc; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .summary-box h3, .insight-box h3 { margin: 0 0 6px 0; font-size: 14px; color: #b45309; }
+  .insight-box { background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 16px; }
+  .ranking table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .ranking th { text-align: left; color: #b45309; font-size: 12px; border-bottom: 2px solid #fde68a; padding: 6px 8px; }
+  .ranking td { border-bottom: 1px solid #fef3c7; padding: 8px; vertical-align: top; }
+  .ranking td.rk { font-weight: 700; color: #b45309; width: 32px; text-align: center; }
+  .ranking td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .ranking a { color: #1e293b; font-weight: 600; text-decoration: none; }
+  .ranking .desc { color: #64748b; font-size: 12px; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🐣 바이브삐약 오픈소스 모닝 브리핑</h1>
+    <p>발행일: 2026-11-04 | 큐레이터: 🐣 코딩삐약이 | 타깃: AI 에이전트 · 바이브코딩 입문자</p>
+    <p>수집 53건 → 예선 12건 → 본선 3건 → 최종 발행 3건 💌</p>
+  </div>
+  
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.88</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>1. <a href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener">vercel-labs/agent-desktop</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> Vercel에서 공개한 OS 접근성 트리 기반 CLI 도구로, AI 에이전트가 데스크톱 앱을 직접 조작하게 만들어 바이브코딩 자동화 실습에 즉시 활용하기 매우 유용합니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- 화면 캡처나 픽셀 매칭 없이 OS 접근성 트리(Accessibility Tree)를 읽어 데스크톱 앱을 제어하는 AI 에이전트용 CLI 및 C 라이브러리 도구입니다.<br>- UI 요소를 고유한 참조값(ref)이 포함된 JSON 구조로 반환하며, 에이전트가 해당 ref를 대상으로 클릭이나 타이핑 등 56개 동작 명령을 수행할 수 있게 합니다.<br>- macOS, Windows, Linux를 지원하며, stdio 기반의 MCP(Model Context Protocol) 서버 기능(agent-desktop mcp)도 기본 제공합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>AI 에이전트 도구 설정에 `agent-desktop mcp` 명령어를 MCP 서버로 등록하면 Claude Code나 Cursor 같은 환경에서 데스크톱 화면의 앱들을 바로 인식하고 조작하게 만들 수 있어요! 입문 실습 시에는 `npm install -g agent-desktop` 설치 후 `agent-desktop status`와 권한 가이드 명령어로 데스크톱 접근 권한부터 먼저 점검해 보세요.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.88</span>
+      <span class="badge diff">🐥 보통 ★★☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>2. <a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">paperclipai/paperclip</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 여러 AI 에이전트를 팀 단위로 조직하고 목표를 부여하는 직관적인 웹 UI 및 오케스트레이션 도구로, 초보자도 바로 에이전트 협업 환경을 구축해볼 수 있습니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Paperclip은 Node.js 서버와 React UI 기반으로 여러 AI 에이전트를 팀 단위로 조율하는 오픈소스 오케스트레이션 도구입니다.<br>- Claude Code, Codex, Cursor 등 다양한 에이전트를 조직도(Org Chart)에 배치해 비즈니스 목표를 부여하고 작업을 관리할 수 있습니다.<br>- 에이전트 및 프로젝트별 예산 설정, 작업 승인 절차, MCP 서버 및 외부 앱 연동, 스케줄링 기능을 한곳의 대시보드에서 제공합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>여러 개의 터미널 창을 띄워 Claude Code나 Cursor 작업을 관리하느라 길을 잃었던 분들에게 딱 맞는 작업 관리 도구예요! 에이전트에게 역할을 나눠 부여하고 프로젝트 예산 한도를 설정해두면, 초과 지출 걱정 없이 안전하게 팀 단위 에이전트 협업을 실습해볼 수 있답니다.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">Hacker News: Show HN (points&gt;=20)</span>
+      <span class="badge score">중요도 0.63</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>3. <a href="https://github.com/ivankovic/omnidiff" target="_blank" rel="noopener">Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 다양한 파일 형식을 초고속으로 비교하는 유용한 Git 도구이나, AI 에이전트 연동보다는 일반 개발 워크플로우 개선에 초점이 맞춰져 있습니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Rust로 작성된 OmniDiff는 코드 변경의 99.95%를 처리하고 98.8%를 콘텐츠 특화 알고리즘으로 비교하는 빠르고 정확한 오픈소스 Git diff 도구입니다.<br>- 일반 코드뿐만 아니라 이미지, 글꼴, 아카이브, PDF 등 다양한 파일 형식을 감지하여 100ms 이내의 속도로 비교합니다.<br>- 대화형 TUI, 스크립트/CI용 헤드리스 모드, JSON 출력 형식을 지원하며 Git 설정 마법사를 통해 손쉽게 difftool로 연동할 수 있습니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>Cursor나 Windsurf 같은 AI 에디터를 사용하는 입문자라면 Open VSX나 VS Code 확장을 통해 OmniDiff를 설치하여 변경 사항을 쉽게 확인할 수 있습니다. 또한 `omnidiff --mode json BEFORE AFTER` 명령어로 diff 결과를 JSON 형태로 추출할 수 있어, AI 에이전트 스크립트가 코드나 문서 변경 내역을 구조화된 데이터로 읽고 분석하게 만들 때 유용합니다.</p></div>
+  </div>
+  <div class="card ranking">
+    <h2>🏆 오늘의 GitHub 트렌딩 TOP 10 (⭐ 누적 스타 순)</h2>
+    <p class="reason">오늘 GitHub Trending 에 오른 저장소를 GitHub API 의 누적 스타 수로 줄 세웠어요. 숫자는 2026-11-04 11:18 KST 기준.</p>
+    <table><thead><tr><th>순위</th><th>저장소</th><th>스타</th><th>포크</th><th>언어</th></tr></thead><tbody>
+        <tr><td class="rk">1</td><td><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a>
+          <div class="desc">Skills for Real Engineers. Straight from my .agents directory.</div></td>
+          <td class="num">⭐ 311,537</td><td class="num">26,176</td><td>Shell</td></tr>
+        <tr><td class="rk">2</td><td><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a>
+          <div class="desc">Persistent Context Across Sessions for Every Agent –  Captures everything your agent does…</div></td>
+          <td class="num">⭐ 111,978</td><td class="num">9,744</td><td>TypeScript</td></tr>
+        <tr><td class="rk">3</td><td><a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener">paperclipai/paperclip</a>
+          <div class="desc">The open-source app everyone uses to manage agents at work</div></td>
+          <td class="num">⭐ 110,845</td><td class="num">18,355</td><td>TypeScript</td></tr>
+        <tr><td class="rk">4</td><td><a href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener">D4Vinci/Scrapling</a>
+          <div class="desc">🕷️ The BEST Web Scraping framework that handles everything from a single request to a ful…</div></td>
+          <td class="num">⭐ 94,959</td><td class="num">9,956</td><td>Python</td></tr>
+        <tr><td class="rk">5</td><td><a href="https://github.com/karpathy/nanochat" target="_blank" rel="noopener">karpathy/nanochat</a>
+          <div class="desc">The best ChatGPT that $100 can buy.</div></td>
+          <td class="num">⭐ 60,201</td><td class="num">8,436</td><td>Python</td></tr>
+        <tr><td class="rk">6</td><td><a href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">JustVugg/colibri</a>
+          <div class="desc">A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vu…</div></td>
+          <td class="num">⭐ 47,279</td><td class="num">5,470</td><td>C</td></tr>
+        <tr><td class="rk">7</td><td><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener">shiyu-coder/Kronos</a>
+          <div class="desc">Kronos: A Foundation Model for the Language of Financial Markets</div></td>
+          <td class="num">⭐ 46,552</td><td class="num">7,665</td><td>Python</td></tr>
+        <tr><td class="rk">8</td><td><a href="https://github.com/pingdotgg/t3code" target="_blank" rel="noopener">pingdotgg/t3code</a>
+          <div class="desc"></div></td>
+          <td class="num">⭐ 44,547</td><td class="num">9,261</td><td>TypeScript</td></tr>
+        <tr><td class="rk">9</td><td><a href="https://github.com/hyprwm/Hyprland" target="_blank" rel="noopener">hyprwm/Hyprland</a>
+          <div class="desc">Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that d…</div></td>
+          <td class="num">⭐ 40,234</td><td class="num">2,164</td><td>C++</td></tr>
+        <tr><td class="rk">10</td><td><a href="https://github.com/p-e-w/heretic" target="_blank" rel="noopener">p-e-w/heretic</a>
+          <div class="desc">Training-free language model modification: Remove censorship, suppress slop, reduce sycop…</div></td>
+          <td class="num">⭐ 38,845</td><td class="num">4,387</td><td>Python</td></tr>
+    </tbody></table>
+  </div>
+</body>
+</html>
