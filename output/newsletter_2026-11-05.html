@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>🐣 바이브삐약 오픈소스 모닝 브리핑 - 2026-11-05</title>
+<style>
+  body { font-family: 'Pretendard', 'Malgun Gothic', -apple-system, sans-serif; background: #fffbeb; color: #1e293b; max-width: 820px; margin: 40px auto; padding: 0 16px; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; border-radius: 16px; padding: 28px; margin-bottom: 24px; }
+  .header h1 { margin: 0 0 8px 0; font-size: 24px; color: #b45309; }
+  .header p { margin: 4px 0; color: #78350f; font-size: 14px; font-weight: 500; }
+  .card { background: #ffffff; border: 1px solid #fde68a; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.08); }
+  .card h2 { margin: 10px 0 8px 0; font-size: 19px; }
+  .card h2 a { color: #1e293b; text-decoration: none; }
+  .card h2 a:hover { color: #d97706; text-decoration: underline; }
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge { font-size: 12px; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+  .badge.source { background: #f1f5f9; color: #475569; }
+  .badge.score { background: #fef3c7; color: #b45309; }
+  .badge.diff { background: #dcfce7; color: #166534; }
+  .badge.eval { background: #e0e7ff; color: #3730a3; }
+  .badge.preview { background: #fce7f3; color: #9d174d; }
+  .reason { font-size: 13px; color: #64748b; margin-bottom: 14px; }
+  .summary-box { background: #f8fafc; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+  .summary-box h3, .insight-box h3 { margin: 0 0 6px 0; font-size: 14px; color: #b45309; }
+  .insight-box { background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px 16px; }
+  .ranking table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .ranking th { text-align: left; color: #b45309; font-size: 12px; border-bottom: 2px solid #fde68a; padding: 6px 8px; }
+  .ranking td { border-bottom: 1px solid #fef3c7; padding: 8px; vertical-align: top; }
+  .ranking td.rk { font-weight: 700; color: #b45309; width: 32px; text-align: center; }
+  .ranking td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .ranking a { color: #1e293b; font-weight: 600; text-decoration: none; }
+  .ranking .desc { color: #64748b; font-size: 12px; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>🐣 바이브삐약 오픈소스 모닝 브리핑</h1>
+    <p>발행일: 2026-11-05 | 큐레이터: 🐣 코딩삐약이 | 타깃: AI 에이전트 · 바이브코딩 입문자</p>
+    <p>수집 53건 → 예선 10건 → 본선 3건 → 최종 발행 3건 💌</p>
+  </div>
+  
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.83</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>1. <a href="https://github.com/max-sixty/worktrunk" target="_blank" rel="noopener">max-sixty/worktrunk</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> AI 코딩 에이전트 다중 작업 시 필수적인 Git worktree 관리를 쉽게 만들어 즉시 실무 바이브코딩에 적용하기 좋습니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Worktrunk는 Claude Code, Codex 등 여러 AI 에이전트를 동시에 실행할 때 서로의 코드가 꼬이지 않도록 Git worktree를 손쉽게 다룰 수 있게 해주는 CLI 도구입니다.<br>- 복잡했던 기존 git worktree 명령어 대신 브랜치 이름을 활용해 단일 명령어로 디렉터리 생성, 전환, 정리를 간결하게 처리합니다.<br>- 훅(Hooks) 자동화, diff 기반 LLM 커밋 메시지 생성, 빌드 캐시 공유(APFS, btrfs, XFS) 등 다중 병렬 작업을 위한 유용한 편의 기능을 지원합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>여러 AI 에이전트에게 동시에 다른 작업을 시키고 싶다면 `wt switch -c -x claude &lt;브랜치명&gt; -- &#x27;&lt;작업 프롬프트&gt;&#x27;` 명령어를 활용해 보세요! 새 작업 트리 생성과 Claude Code 실행이 한 번에 처리되어, 작업 디렉터리가 충돌할 걱정 없이 5~10개 이상의 작업을 안전하게 병렬로 돌려볼 수 있습니다.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">GitHub Trending Daily</span>
+      <span class="badge score">중요도 0.79</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>2. <a href="https://github.com/anomalyco/hex" target="_blank" rel="noopener">anomalyco/hex</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> 로컬 음성 입력 도구로 설치가 간단하여 코딩 에이전트 프롬프트 음성 작성 워크플로우에 가볍게 쓰기 좋습니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Mac, Windows, Linux 환경을 지원하는 로컬 음성 받아쓰기(dictation) 도구입니다.<br>- 단축키를 누른 채 말하고 손을 떼면, 음성을 텍스트로 변환해 현재 열려 있는 앱에 바로 붙여넣어 줍니다.<br>- 첫 실행 시 음성 모델을 다운로드한 후에는 외부로 데이터가 전송되지 않고 기기 내부에서만 안전하게 동작합니다.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>바이브코딩을 할 때 키보드로 길게 프롬프트를 치기 번거롭다면 Hex를 켜두고 단축키를 눌러 말해보세요! Cursor나 터미널의 에이전트 입력창에 음성으로 말한 내용이 텍스트로 즉시 붙여넣어지며, 로컬에서만 처리되어 프라이버시 걱정 없이 자연스럽게 아이디어를 전달할 수 있어요.</p></div>
+  </div>
+  <div class="card">
+    <div class="badge-row">
+      <span class="badge source">Hacker News: Show HN (points&gt;=20)</span>
+      <span class="badge score">중요도 0.66</span>
+      <span class="badge diff">🐣 쉬움 ★☆☆</span>
+      <span class="badge eval">검수 통과 · 재생성 0회</span>
+    </div>
+    <h2>3. <a href="https://github.com/peterretief/codemap" target="_blank" rel="noopener">Show HN: Codemap – one-page interactive map of any Go repository</a></h2>
+    <p class="reason"><strong>선별 근거:</strong> Go 저장소 구조를 한눈에 시각화해 에이전트가 코드를 탐색하거나 사람이 파악할 때 유용하지만 Go 언어에 한정되어 있습니다.</p>
+    <div class="summary-box"><h3>📌 3줄 핵심 요약</h3><p>- Go 모듈의 모든 패키지, 내부 의존 관계, 파일별 함수를 단일 HTML 파일로 인터랙티브하게 시각화해 주는 도구예요.<br>- 패키지 검색과 의존 관계 클릭 확인이 가능하며, GitHub 저장소의 경우 해당 함수 라인으로 바로 이동할 수 있어요.<br>- Go 1.24 이상 환경에서 명령어 한 줄(`go run github.com/peterretief/codemap@latest -o code-map.html`)로 실행하거나 GitHub Actions(`peterretief/codemap@v0.1.3`)로 자동 생성할 수 있어요.</p></div>
+    <div class="insight-box"><h3>🐣 코딩삐약이의 입문자 실전 팁</h3><p>낯선 오픈소스 Go 프로젝트나 바이브코딩으로 작성 중인 Go 저장소의 복잡한 구조를 단일 HTML 파일로 한눈에 파악할 수 있어요. 패키지 간의 연결 구조와 함수 위치를 브라우저에서 인터랙티브하게 확인하며 코드를 탐색해 보세요!</p></div>
+  </div>
+  <div class="card ranking">
+    <h2>🏆 오늘의 GitHub 트렌딩 TOP 10 (⭐ 누적 스타 순)</h2>
+    <p class="reason">오늘 GitHub Trending 에 오른 저장소를 GitHub API 의 누적 스타 수로 줄 세웠어요. 숫자는 2026-11-05 11:23 KST 기준.</p>
+    <table><thead><tr><th>순위</th><th>저장소</th><th>스타</th><th>포크</th><th>언어</th></tr></thead><tbody>
+        <tr><td class="rk">1</td><td><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a>
+          <div class="desc">Skills for Real Engineers. Straight from my .agents directory.</div></td>
+          <td class="num">⭐ 313,416</td><td class="num">26,290</td><td>Shell</td></tr>
+        <tr><td class="rk">2</td><td><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">thedotmack/claude-mem</a>
+          <div class="desc">Persistent Context Across Sessions for Every Agent –  Captures everything your agent does…</div></td>
+          <td class="num">⭐ 112,917</td><td class="num">9,806</td><td>TypeScript</td></tr>
+        <tr><td class="rk">3</td><td><a href="https://github.com/D4Vinci/Scrapling" target="_blank" rel="noopener">D4Vinci/Scrapling</a>
+          <div class="desc">🕷️ The BEST Web Scraping framework that handles everything from a single request to a ful…</div></td>
+          <td class="num">⭐ 96,656</td><td class="num">10,125</td><td>Python</td></tr>
+        <tr><td class="rk">4</td><td><a href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">JustVugg/colibri</a>
+          <div class="desc">A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vu…</div></td>
+          <td class="num">⭐ 47,784</td><td class="num">5,536</td><td>C</td></tr>
+        <tr><td class="rk">5</td><td><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener">shiyu-coder/Kronos</a>
+          <div class="desc">Kronos: A Foundation Model for the Language of Financial Markets</div></td>
+          <td class="num">⭐ 46,826</td><td class="num">7,717</td><td>Python</td></tr>
+        <tr><td class="rk">6</td><td><a href="https://github.com/p-e-w/heretic" target="_blank" rel="noopener">p-e-w/heretic</a>
+          <div class="desc">Training-free language model modification: Remove censorship, suppress slop, reduce sycop…</div></td>
+          <td class="num">⭐ 39,363</td><td class="num">4,447</td><td>Python</td></tr>
+        <tr><td class="rk">7</td><td><a href="https://github.com/Donchitos/Claude-Code-Game-Studios" target="_blank" rel="noopener">Donchitos/Claude-Code-Game-Studios</a>
+          <div class="desc">Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a co…</div></td>
+          <td class="num">⭐ 35,445</td><td class="num">4,695</td><td>Shell</td></tr>
+        <tr><td class="rk">8</td><td><a href="https://github.com/floci-io/floci" target="_blank" rel="noopener">floci-io/floci</a>
+          <div class="desc">Light, fluffy, and always free - The AWS Local Emulator alternative</div></td>
+          <td class="num">⭐ 29,672</td><td class="num">3,282</td><td>Java</td></tr>
+        <tr><td class="rk">9</td><td><a href="https://github.com/Usagi-org/ai-goofish-monitor" target="_blank" rel="noopener">Usagi-org/ai-goofish-monitor</a>
+          <div class="desc">基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。</div></td>
+          <td class="num">⭐ 17,166</td><td class="num">2,908</td><td>Python</td></tr>
+        <tr><td class="rk">10</td><td><a href="https://github.com/vercel-labs/agent-desktop" target="_blank" rel="noopener">vercel-labs/agent-desktop</a>
+          <div class="desc">Computer use CLI for AI agents</div></td>
+          <td class="num">⭐ 15,272</td><td class="num">1,063</td><td>Rust</td></tr>
+    </tbody></table>
+  </div>
+</body>
+</html>
